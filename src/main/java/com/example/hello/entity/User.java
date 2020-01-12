@@ -8,15 +8,18 @@ import javax.persistence.Table;
 import javax.persistence.Id;
 
 @Entity
-@Table(name="user")
+@Table(name = "user")
 @Data
 public class User {
 
+    public User() {
+    }
+
     @Id
-    @Column(name="id")
+    @Column(name = "id")
     private Long id;
-    
-    @Column(name="name")
+
+    @Column(name = "name")
     private String name;
 
     public User(Long id, String name) {

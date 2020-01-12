@@ -15,8 +15,8 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping("getUser/{id}")
-    public String getUser(@PathVariable Long id) {
-        return userService.findById(id).toString();
+    public Object getUser(@PathVariable Long id) {
+        return userService.findById(id);
     }
 
 }
